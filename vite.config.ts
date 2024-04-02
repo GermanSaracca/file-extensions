@@ -21,7 +21,8 @@ export default defineConfig({
   plugins: [dts({ outDir: 'dist', include: ['src/'] }), tsconfigPaths()],
   test: {
     coverage: {
-      exclude: [...configDefaults.exclude, '.eslintrc.cjs', 'commitlint.config.js', 'src/index.ts']
+      exclude: [...configDefaults.exclude, '.eslintrc.cjs', 'commitlint.config.js', 'src/index.ts'],
+      reporter: ['json-summary', 'html']
     }
   }
 })
