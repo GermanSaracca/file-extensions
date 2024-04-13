@@ -15,14 +15,14 @@ export default defineConfig({
     },
     sourcemap: true
   },
-  resolve: {
-    alias: [{ find: '@', replacement: resolve(__dirname, 'src') }]
-  },
   plugins: [dts({ outDir: 'dist', include: ['src/'] }), tsconfigPaths()],
   test: {
     coverage: {
       exclude: [...configDefaults.exclude, '.eslintrc.cjs', 'commitlint.config.js', 'src/index.ts'],
       reporter: ['json-summary', 'html']
     }
+  },
+  resolve: {
+    alias: [{ find: '@', replacement: resolve(__dirname, 'src') }]
   }
 })
