@@ -1,3 +1,3 @@
-export { isFilename } from '@/common'
+export { isValidFilename } from '@/common'
 
 export * from '@/getFileExtension'

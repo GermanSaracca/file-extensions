@@ -1,2 +1,2 @@
 export * from './isString'
-export * from './isFilename'
+export * from './isValidFilename'
