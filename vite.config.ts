@@ -17,9 +17,16 @@ export default defineConfig({
   },
   plugins: [dts({ outDir: 'dist', include: ['src/'] }), tsconfigPaths()],
   test: {
+    globals: true,
     coverage: {
-      exclude: [...configDefaults.exclude, '.eslintrc.cjs', 'commitlint.config.js', 'src/index.ts'],
-      reporter: ['json-summary', 'html']
+      exclude: [
+        ...configDefaults.exclude,
+        '.eslintrc.cjs',
+        'commitlint.config.js',
+        'src/index.ts',
+        'stryker.config.mjs'
+      ],
+      reporter: ['html', 'json-summary']
     }
   },
   resolve: {

@@ -28,4 +28,12 @@ describe('isValidFilename', () => {
     // @ts-expect-error testing purposes
     expect(isValidFilename(arg)).toBe(expected)
   })
+
+  test.each([
+    [true, false],
+    [false, false]
+  ])('isValidFilename(%j) should not be %j', (arg, expected) => {
+    // @ts-expect-error testing purposes
+    expect(isValidFilename(arg)).toBe(expected)
+  })
 })
