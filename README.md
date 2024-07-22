@@ -15,7 +15,7 @@
 
 </div>
 
-## Utility library for detecting extensions for different types of files and much more
+## Utility library for detecting extensions for different types of files
 
 ### Libreria realizada en curso de Web Elite Developer de Level Up
 
